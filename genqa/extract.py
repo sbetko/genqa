@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 import semchunk
-from pnc.genqa_old.convert import DocToMarkdown
+from genqa.convert import DocToMarkdown
 from llama_cpp import Llama
 from tqdm.auto import tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
@@ -113,6 +113,7 @@ def process_file(
     try:
         converter = DocToMarkdown()
         text = converter.convert(file_path)
+        file_path = Path(file_path)
 
         if text is None:
             logging.error(f"Failed to extract text from file: {file_path}")
@@ -121,7 +122,7 @@ def process_file(
         chunker = semchunk.chunkerify(lambda t: token_count(llm, t), chunk_size)
         chunks = list(chunker(text))
 
-        output_file = output_dir / f"{Path(file_path).stem}_qa.json"
+        output_file = output_dir / f"{file_path.stem}_qa.json"
 
         if output_file.exists() and not overwrite:
             with open(output_file, "r", encoding="utf-8") as f:
