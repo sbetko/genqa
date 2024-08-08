@@ -1,0 +1,9 @@
+clean-text[gpl]
+huggingface-hub
+jsonschema
+mammoth
+markdownify
+llama-cpp-python==0.2.82
+lxml[html_clean]
+pymupdf4llm
+tqdm

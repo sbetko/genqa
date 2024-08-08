@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genqa"
+authors = [
+    {name = "Sage Betko", email = "sage.betko@gmail.com"},
+]
+description = "A tool for extracting question-answer pairs from documents"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["document", "qa", "extraction"]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "clean-text[gpl]",
+    "huggingface-hub",
+    "jsonschema",
+    "mammoth",
+    "markdownify",
+    "llama-cpp-python==0.2.82",
+    "lxml[html_clean]",
+    "pymupdf4llm",
+    "tqdm",
+]
+dynamic = ["version"]
+
+[tool.setuptools_scm]
+write_to = "genqa/src/_version.py"
+
+[tool.setuptools.packages.find]
+where = ["genqa"]
+include = ["src*"]
+
+[project.urls]
+Homepage = "https://github.com/pkla/genqa"
