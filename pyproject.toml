@@ -26,6 +26,7 @@ dependencies = [
     "llama-cpp-python==0.2.82",
     "lxml[html_clean]",
     "pymupdf4llm",
+    "semchunk",
     "tqdm",
 ]
 dynamic = ["version"]
