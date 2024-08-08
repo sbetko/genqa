@@ -39,4 +39,4 @@ where = ["."]
 include = ["genqa*"]
 
 [project.urls]
-Homepage = "https://github.com/pkla/genqa"
+Homepage = "https://github.com/sbetko/genqa"
