@@ -7,7 +7,7 @@ This tool extracts question-answer pairs from documents using a local LLM. It ch
 Install directly from GitHub:
 
 ```
-pip install git+https://github.com/sbetko/genqa.git
+pip install git+https://github.com/sbetko/genqa.git --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
 ```
 
 ## Usage
