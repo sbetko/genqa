@@ -31,7 +31,7 @@ dependencies = [
 dynamic = ["version"]
 
 [tool.setuptools_scm]
-write_to = "genqa/src/_version.py"
+write_to = "genqa/_version.py"
 
 [tool.setuptools.packages.find]
 where = ["."]

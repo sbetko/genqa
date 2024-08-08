@@ -14,3 +14,7 @@ except PackageNotFoundError:  # pragma: no cover
     __version__ = "unknown"
 finally:
     del version, PackageNotFoundError
+
+from .convert import DocToMarkdown
+from .extract import process_file, generate_qa_pairs
+from .make_csv import process_directory
