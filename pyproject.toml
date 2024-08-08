@@ -9,7 +9,7 @@ authors = [
 ]
 description = "A tool for extracting question-answer pairs from documents"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.7"
 keywords = ["document", "qa", "extraction"]
 license = {text = "MIT"}
 classifiers = [
@@ -34,8 +34,8 @@ dynamic = ["version"]
 write_to = "genqa/src/_version.py"
 
 [tool.setuptools.packages.find]
-where = ["genqa"]
-include = ["src*"]
+where = ["."]
+include = ["genqa*"]
 
 [project.urls]
 Homepage = "https://github.com/pkla/genqa"
