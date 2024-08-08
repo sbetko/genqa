@@ -167,7 +167,7 @@ def main():
         nargs="+",
         help="Files to process",
     )
-    parser.add_argument("--output_dir", default="qa_output", help="Output directory for results")
+    parser.add_argument("--output_dir", default="qa_result", help="Output directory for results")
     parser.add_argument("--temperature", type=float, default=0.0, help="Temperature for the model")
     parser.add_argument(
         "--n_ctx", type=int, default=16384, help="Maximum context length for the model"
