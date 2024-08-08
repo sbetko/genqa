@@ -96,7 +96,7 @@ The CSV contains:
 - `qa_number`: QA pair number in chunk
 - `question`: Generated question
 - `answer`: Generated answer
-- `supporting_quotes`: Relevant quotes from chunk
+- `supporting_quotes`: Relevant quotes from chunk, delimited by pipes ("`|`")
 
 ## Model
 
